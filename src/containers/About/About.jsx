@@ -13,7 +13,6 @@ const About = () => {
 
     client.fetch(query).then((data) => {
       setAbouts(data);
-      // console.log('data',data)
     });
   }, []);
 
@@ -22,7 +21,7 @@ const About = () => {
       <h2 className="head-text">I Know that <span>Good Design</span> <br />means  <span>Good Business</span></h2>
 
       <div className="app__profiles">
-        {abouts.map((about, index) => (
+        {abouts.length && abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
